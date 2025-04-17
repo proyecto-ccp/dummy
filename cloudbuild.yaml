@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/proyecto-ccp/dummy-repo/dummy:latest', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'us-central1-docker.pkg.dev/proyecto-ccp/dummy-repo/dummy:latest']
+logsBucket: 'gs://proyecto-ccp_cloudbuild/log'
+serviceAccount: 'projects/proyecto-ccp/serviceAccounts/822907305241-compute@developer.gserviceaccount.com'
