@@ -1,8 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'us-central1-docker.pkg.dev/experimento-ccp/dummy-repo/dummy:latest', '.']
-  us-central1-docker.pkg.dev/experimento-ccp/dummy-repo
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'us-central1-docker.pkg.dev/experimento-ccp/dummy-repo/dummy:latest']
 logsBucket: 'gs://experimento-ccp_cloudbuild/log'
-serviceAccount: 'projects/experimento-ccp/serviceAccounts/596275467600@cloudbuild.gserviceaccount.com'
+serviceAccount: 'projects/experimento-ccp/serviceAccounts/compilador@experimento-ccp.iam.gserviceaccount.com'
